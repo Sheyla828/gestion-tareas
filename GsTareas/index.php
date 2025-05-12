@@ -1,4 +1,5 @@
 <?php
-include 'controlador/TareaController.php';
+require_once __DIR__ . '/controlador/TareaController.php';
+
 $controlador = new TareaController();
-$controlador->mostrar();
+$controlador->mostrarTareas();

@@ -1,8 +1,9 @@
 <?php
-include_once 'modelo/Tarea.php';
+require_once __DIR__ . '/../modelo/Tarea.php';
+
 class TareaController {
-    public function mostrar() {
-        $tarea = new Tarea();
-        include 'vista/tareaVista.php';
+    public function mostrarTareas() {
+        $tareas = Tarea::obtenerTareas();
+        include __DIR__ . '/../vista/TareaVista.php';
     }
 }
